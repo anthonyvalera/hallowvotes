@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "parcel build public/index.html",
+    "build": "parcel build public/index.html && cp public/_redirects dist/_redirects",
     "start": "parcel public/index.html",
     "watch": "parcel watch public/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
