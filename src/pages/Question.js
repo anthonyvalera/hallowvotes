@@ -20,6 +20,8 @@ const StyledHeader = styled.h1`
   filter: drop-shadow(0px 0px 1px #fff);
   font-family: Avenir;
   text-transform: lowercase;
+  max-width: 80%;
+  margin: 50px 0;
 `;
 
 const StyledMain = styled.main`

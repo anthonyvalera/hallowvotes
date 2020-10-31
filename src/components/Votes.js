@@ -16,6 +16,20 @@ import GET_VOTES from '../graphql/getVotes';
 import { CarouselContext } from 'pure-react-carousel';
 import { useSlideNumber } from '../hooks/useSlideNumber';
 
+const VoteWrapper = styled.div`
+  max-width: 50%;
+  margin: auto;
+  text-align: left;
+  word-break: break-all;
+`;
+
+const ListDisplay = styled.li`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 50px;
+`
+
 function Votes({ active, questionId }) {
   const { data: { votes = [] } = {}, loading, error, refetch } = useQuery(GET_VOTES, {
     variables: { questionId },
@@ -54,11 +68,11 @@ function Votes({ active, questionId }) {
 
   return (
     <>
-      <div>
+      <VoteWrapper>
         {normalizedVotes.map(({ id, name, count }) => {
-          return <li key={id}>{name} - {count}</li>;
+          return <ListDisplay key={id}>{name}<span>{count}</span></ListDisplay>;
         })}
-      </div>
+      </VoteWrapper>
     </>
   );
 }

@@ -32,6 +32,21 @@ const StyledSlider = styled(Slider)`
   overflow: visible;
 `;
 
+const StyledTitle = styled.h2`
+  text-transform: lowercase;
+  font-family: Avenir;
+  font-weight: 300;
+  font-size: 40px;
+`;
+
+const StyledQR = styled.img`
+  position: fixed;
+  z-index: 30;
+  left: 20px;
+  bottom: 20px;
+  filter: invert(1);
+`;
+
 const CustomSlider = ({ slides }) => {
   const slideNumber = useSlideNumber();
   console.log({ slideNumber });
@@ -40,7 +55,7 @@ const CustomSlider = ({ slides }) => {
       {slides.map(({ id, title, icon: { url = '' } }, i) => (
         <Slide index={i} key={id}>
           <img src={url} />
-          <p>{title}</p>
+          <StyledTitle>{title}</StyledTitle>
           <Votes active={slideNumber === i} questionId={id} />
         </Slide>
       ))}
@@ -66,6 +81,7 @@ function TV() {
           <CustomSlider slides={questions} />
         </CarouselProvider>
       </StyledBody>
+      <StyledQR src="https://media.graphcms.com/m2FxXZMiTtqz2Kj90Ngy" />
     </StyledMain>
   );
 }

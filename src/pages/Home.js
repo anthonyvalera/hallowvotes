@@ -23,7 +23,7 @@ function Home() {
 
   return (
     <main>
-      <Title>SIGN IN</Title>
+      <Title size="30">SIGN IN</Title>
       {
         loading
           ? <p>Loading...</p>

@@ -11,6 +11,7 @@ const StyledInput = styled.input`
   letter-spacing: 5px;
   margin-bottom: ${sizes.lg};
   padding: 10px 20px;
+  max-width: 90%;
 
   &:hover, &:focus, &:active {
     outline: none;

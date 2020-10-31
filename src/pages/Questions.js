@@ -12,7 +12,7 @@ const StyledList = styled.ul`
 
   li {
     cursor: pointer;
-    font-size: 30px;
+    font-size: 20px;
     margin-bottom: 10px;
     letter-spacing: 4px;
     filter: drop-shadow(0px 0px 1px #fff);

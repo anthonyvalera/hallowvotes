@@ -7,11 +7,10 @@ import Button from './Button';
 import { useLocation } from 'react-router-dom';
 
 const StyledList = styled.ul`
-  width: 100%;
   border: 10px solid;
   max-height: 400px;
   overflow: scroll;
-  width: 100%;
+  width: 80%;
   font-size: 30px;
   text-align: center;
 `;

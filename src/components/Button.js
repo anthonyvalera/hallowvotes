@@ -16,6 +16,7 @@ const StyledButton = styled.button`
   text-transform: uppercase;
   text-shadow: 0 0 20px ${colors.secondary};
   transition: color 1s ease;
+  margin-bottom: 40px;
 
   * + & {
     margin-top: ${sizes.xxl};

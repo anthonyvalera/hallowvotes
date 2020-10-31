@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { colors, sizes } from '../globalStyles';
 
 const StyledTitle = styled.h1`
-  font-size: 45px;
+  font-size: ${({ size = 45 }) => `${size}px`};
   color: ${colors.secondary};
   letter-spacing: 31px;
   text-align: center;
@@ -11,8 +11,8 @@ const StyledTitle = styled.h1`
   margin-bottom: 80px;
 `;
 
-function Title({ children }) {
-  return <StyledTitle>{children}</StyledTitle>
+function Title({ size, children }) {
+  return <StyledTitle size={size}>{children}</StyledTitle>
 };
 
 export default memo(Title);
